@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;300;400;500;600;700;900&display=swap");
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+::before:after {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+.row {
+  padding: 0 10px;
+}
+.box-shadow {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
+}
+.hidden {
+  display: none !important;
+}
+.Section {
+  background-color: var(--bg-black-50);
+  min-height: 100vh;
+  display: block;
+  /* position:fixed; */
+  padding: 0 30px;
+  /* left: 270px; */
+  /* top: 0;
+    right: 0; */
+  opacity: 1;
+  /* z-index: 0; */
+}
+.main-content {
+  padding-left: 270px;
+}
+/* Aside Styling */
+.aside {
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  background: var(--bg-black-100);
+  /* background-color: #e3e3e5d4; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  border-right: 1px solid var(--bg-black-50);
+}
+.aside .logo {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.aside .logo a {
+  text-decoration: none;
+  /* color: green; */
+  color: var(--text-black-900);
+  font-weight: 700;
+  padding: 15px 20px;
+  letter-spacing: 5px;
+  position: relative;
+}
+.aside .logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+}
+
+.aside .logo a::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  bottom: 4px;
+  left: 5px;
+}
+.aside .logo a::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  top: 5px;
+  right: 4px;
+}
+.aside .nav-toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 300px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-black-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside .nav-toggler span {
+  width: 16px;
+  height: 2px;
+  border: 1px solid var(--skin-color);
+  display: inline-block;
+  position: relative;
+}
+.aside .nav-toggler span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  border: 1px solid var(--skin-color);
+  top: 3px;
+  left: -1px;
+}
+.aside .nav-toggler span::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  border: 1px solid var(--skin-color);
+  bottom: 3px;
+  right: -1px;
+}
+.aside .navB {
+  margin-top: 50px;
+}
+.aside .navB li {
+  margin-bottom: 20px;
+  /* display: block; */
+}
+.aside .navB li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black-900);
+  padding: 5px 15px;
+  border-bottom: 1px solid var(--bg-black-50);
+}
+.aside .navB li a.active {
+  color: var(--skin-color);
+}
+.aside .navB li a i {
+  margin-right: 12px;
+}
+
+/* Home Section */
+.Home .home-img img {
+  /* margin-top: 22px; */
+  height: 300px;
+  width: 200px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  /* background-color: var(--skin-color); */
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+.Home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+}
+.Home .home-info {
+  /* flex: 2; */
+  flex: 0 0 62%;
+}
+.Home .home-img {
+  /* flex: 1; */
+
+  flex: 0 0 38%;
+  text-align: center;
+  position: relative;
+}
+.Home .home-img::before {
+  /* flex: 1; */
+
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-left: 10px solid var(--skin-color);
+  border-top: 10px solid var(--skin-color);
+  top: 8px;
+  left: 40px;
+}
+.Home .home-img::after {
+  /* flex: 1; */
+
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-right: 10px solid var(--skin-color);
+  border-bottom: 10px solid var(--skin-color);
+  bottom: 8px;
+  right: 40px;
+}
+h3.hello {
+  font-size: 27px;
+  margin: 15px 0;
+}
+h3.hello span {
+  font-family: "Clicker Script", cursive;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--skin-color);
+}
+h3.my-profession {
+  font-size: 30px;
+  margin: 15px 0;
+}
+h3.my-profession span {
+  color: var(--skin-color);
+}
+.home-info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+.hire-me .btn {
+  background-color: var(--skin-color);
+  font-size: 22px;
+  font-weight: 500;
+  padding: 12px 35px;
+  border-radius: 40px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale();
+}
+.hire-me {
+  text-align: center;
+}
+
+/*                                     About Section                         */
+
+.Section .container {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+.section-title {
+  flex: 0 0 100%;
+  width: 100%;
+  /* background-color: red; */
+  padding: 0 5px;
+}
+.section-title h2 {
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 900;
+  position: relative;
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  border: 2px solid var(--skin-color);
+  top: 100%;
+  left: 0;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  border: 2px solid var(--skin-color);
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+}
+.about .about-content {
+  flex: 0 0 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+.about .about-content .about-text {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about-content .about-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--text-black-700);
+}
+.about .about-content .about-text h3 span {
+  color: var(--skin-color);
+}
+.about .about-content .about-text p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+.about .about-content .personal-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  margin-top: 40px;
+}
+.about .about-content .personal-info .info-term {
+  flex: 0 0 50%;
+  max-width: 47%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 18px 0;
+}
+.about .about-content .personal-info .info-term p {
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid black;
+}
+.about .about-content .personal-info .info-term p span {
+  color: var(--text-black-700);
+  margin-left: 5px;
+}
+.about .about-content .personal-info .buttons {
+  margin-top: 28px;
+}
+.about .about-content .personal-info .buttons .btn {
+  border-radius: 30px;
+  margin-left: 5px;
+}
+.about .about-content .personal-info .buttons .btn a {
+  text-decoration: none;
+  color: white;
+}
+.about .about-content .skills {
+  flex: 0 0 40%;
+  max-width: 40%;
+  /* background-color: green; */
+  margin-top: 40px;
+}
+.about .about-content .skills .skill-item {
+  flex: 0 0 100%;
+  margin-bottom: 5px;
+}
+.about .about-content .skills .skill-item h5 {
+  line-height: 40px;
+  font-weight: 600;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+
+.about .about-content .skills .skill-item .skill-progress {
+  height: 7px;
+  background-color: var(--bg-black-50);
+  border-radius: 4px;
+  position: relative;
+  max-width: 89%;
+}
+.about .about-content .skills .skill-item .skill-progress .progress-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 7px;
+  width: 60%;
+  background-color: var(--skin-color);
+  border-radius: 4px;
+}
+.about .about-content .skills .skill-item .skill-perc {
+  position: absolute;
+  right: 0;
+  top: -48px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.about .about-content .Certs {
+  flex: 0 0 50%;
+  margin-top: 40px;
+  /* background-color: red; */
+  padding: 0 10px;
+}
+.about .about-content .education {
+  flex: 0 0 50%;
+  margin-top: 40px;
+  padding: 0 10px;
+  /* background-color: green; */
+}
+.about .about-content h3.title {
+  font-size: 23px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: var(--text-black-900);
+}
+.about .about-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about-content .timeline {
+  background-color: var(--bg-black-100);
+  padding: 30px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--bg-black-50);
+  width: 100%;
+  position: relative;
+}
+.about .about-content .timeline .timeline-item {
+  padding-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+}
+.about .about-content .timeline .timeline-item::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  background-color: var(--skin-color);
+}
+.about .about-content .timeline .timeline-item .circle-dot {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
+  background-color: var(--skin-color);
+}
+.about .about-content .timeline .timeline-item:last-child {
+  padding-bottom: 0;
+}
+.about .about-content .timeline .timeline-item .timeline-date {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--text-black-700);
+}
+.about .about-content .timeline .timeline-item .timeline-date .fas {
+  margin-right: 11px;
+}
+.about .about-content .timeline .timeline-item .timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-item .timeline-text {
+  line-height: 25px;
+  font-size: 16px;
+  text-align: justify;
+  text-transform: capitalize;
+  color: var(--text-black-9700);
+}
+/* Portfolio */
+
+.portfolio .portfolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.portfolio .portfolio-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+.portfolio .portfolio-items-inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio .portfolio-items-inner .portfolio-img img {
+  width: 100%;
+  height: 300px;
+}
+
+/* Contact */
+
+.contact .contact-title {
+  color: var(--skin-color);
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contact .contact-sub-title {
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 15px;
+}
+.contact .contact-info-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.contact .contact-info-item .icon {
+  display: inline-block;
+}
+.contact .contact-info-item .icon .fas {
+  color: var(--skin-color);
+  font-size: 25px;
+}
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+  margin: 15px 15px;
+}
+.contact .contact-info-item p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--text-black-700);
+  text-transform: capitalize;
+  margin: 15px 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+  .about .about-content .personal-info .info-term p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .Home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .Home .home-img {
+    display: none;
+  }
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .about .about-content .Certs,
+  .about .about-content .education,
+  .about .about-content .personal-info,
+  .about .about-content .skills {
+    flex: 0 0 100%;
+
+    max-width: 100%;
+  }
+}
