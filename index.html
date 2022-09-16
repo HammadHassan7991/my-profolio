@@ -36,9 +36,9 @@
       </div>
       <ul class="navB">
         <li><a href="#Home" class="active"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="#About"><i class="fas fa-user"></i></i>About</a></li>
-        <li><a href="#Portfolio"><i class="fas fa-briefcase"></i></i>Porfolio</a></li>
-        <li><a href="#Contact"><i class="fas fa-comment"></i></i>Contact</a></li>
+        <li><a href="#About" class="abc"><i class="fas fa-user"></i></i>About</a></li>
+        <li><a href="#Portfolio" class="efg"><i class="fas fa-briefcase"></i></i>Porfolio</a></li>
+        <li><a href="#Contact" class="hij"><i class="fas fa-comment"></i></i>Contact</a></li>
       </ul>
 
     </div>
@@ -47,7 +47,7 @@
     <!-------------------------- Main Content Start ------------------------->
     <div class="main-content">
       <!----------------------- Home Section Start ------------------------->
-      <section class="Home Section" id="Home">
+      <section class="Home Section active" id="Home">
         <div class="container">
           <div class="row">
             <div class="home-info">
@@ -440,30 +440,29 @@
           <h3 class="contact-title ">SEND ME AN EMAIL</h3>
           <h4 class="contact-sub-title ">I'M VERY RESPONSIVE TO MESSAGES</h4>
         </div>
-    </div>
-    </section>
-    <!------------------------Contact Section End  ------------------------>
+      </section>
+      <!------------------------Contact Section End  ------------------------>
 
-  </div>
-  <!--------------------------Main Content End ---------------------->
+    </div>
+    <!--------------------------Main Content End ---------------------->
 
-  <!-- Style Switcher Start -->
-  <div class="style-switcher">
-    <div class="style-switcher-toggler s-icons">
-      <i class="fas fa-cog fa-spin"></i>
+    <!-- Style Switcher Start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icons">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icons">
+        <i class="fas fa-moon"></i>
+      </div>
+      <h4>Theme colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
     </div>
-    <div class="day-night s-icons">
-      <i class="fas fa-moon"></i>
-    </div>
-    <h4>Theme colors</h4>
-    <div class="colors">
-      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-    </div>
-  </div>
   </div>
 
 
@@ -477,12 +476,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-    <!-- typed aninmation cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-    <!-- script file -->
+  <!-- typed aninmation cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+  <!-- script file -->
   <script src="script.js"></script>
   <script src="style-switcher.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -45,13 +45,30 @@ ul {
   background-color: var(--bg-black-50);
   min-height: 100vh;
   display: block;
-  /* position:fixed; */
+  position:fixed;
   padding: 0 30px;
-  /* left: 270px; */
-  /* top: 0;
-    right: 0; */
+  left: 270px; 
+  top: 0;
+    right: 0;
+    bottom: 0;
   opacity: 1;
-  /* z-index: 0; */
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+}
+Section.back-section{
+  z-index: 1;
+}
+.Section.active{
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 0.5s ease ;
+}
+@keyframes slideSection
+{
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(0%);}
 }
 .main-content {
   padding-left: 270px;
@@ -68,6 +85,7 @@ ul {
   top: 0;
   z-index: 20;
   border-right: 1px solid var(--bg-black-50);
+  transition: all 0.5s ease;
 }
 .aside .logo {
   position: absolute;
@@ -119,34 +137,48 @@ ul {
   left: 300px;
   border-radius: 5px;
   border: 1px solid var(--bg-black-50);
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
+
 .aside .nav-toggler span {
-  width: 16px;
+  width: 18px;
   height: 2px;
   border: 1px solid var(--skin-color);
   display: inline-block;
   position: relative;
 }
+.aside .nav-toggler.open span{
+border-color: transparent;
+}
 .aside .nav-toggler span::before {
   content: "";
   position: absolute;
-  width: 16px;
+  width: 18px;
   height: 2px;
   border: 1px solid var(--skin-color);
   top: 3px;
   left: -1px;
 }
+.aside .nav-toggler.open span::before{
+  transform: rotate(45deg);
+  top: 0;
+}
 .aside .nav-toggler span::after {
   content: "";
   position: absolute;
-  width: 16px;
+  width: 18px;
   height: 2px;
   border: 1px solid var(--skin-color);
   bottom: 3px;
   right: -1px;
+}
+.aside .nav-toggler.open span::after{
+  transform: rotate(-45deg);
+  top: 0;
 }
 .aside .navB {
   margin-top: 50px;
@@ -552,12 +584,38 @@ h3.my-profession span {
 
 /* Responsive */
 
-@media (max-width: 1199px) {
+@media (max-width: 1110px) {
   .aside {
     left: -270px;
+    
   }
-  .main-content {
-    padding-left: 0;
+  .aside.open{
+    left: 0;
+    /* animation: slideAside 0.5s ease ; */
+}
+/* @keyframes slideAside
+{
+  0%{transform: translateX(-270px);}
+  100%{transform: translateX(0px);}
+} */
+  .aside .nav-toggler
+  {
+    display: flex;
+    left: 30px;
+  }
+  .nav-toggler.open
+  {
+    
+    left: 108px;
+  }
+ 
+
+  
+  .Section{
+    left: 0;
+  }
+  .Section.open{
+    left: 270px;
   }
   .about .about-content .personal-info .info-term p span {
     display: block;
