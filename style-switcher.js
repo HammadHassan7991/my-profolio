@@ -4,13 +4,18 @@ $(".style-switcher-toggler").on("click", () => {
   //   console.log($(".style-switcher").attr("class"));
   //   return classList
 });
-
 // hide styel-switcher on scroll down
-window.addEventListener("scroll", () => {
+// window.addEventListener("scroll", () => {
+
+// });
+// hide styel-switcher on scroll down
+$('.Section').scroll(function () {
   if ($(".style-switcher").hasClass("open")) {
-    $(".style-switcher").removeClass("open");
+    $(".style-switcher").toggleClass("open");
+    console.log('scroll works');
   }
-});
+  console.log('scrolled....');
+})
 
 // theme colors
 const setActiveStyle = (color) => {
