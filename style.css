@@ -13,8 +13,9 @@ body.dark {
   --text-black-900: #ffffff;
   --text-black-700: #e9e9e9;
 }
+
 body {
-  
+
   line-height: 1.5;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -515,7 +516,7 @@ h3.my-profession span {
   font-size: 16px;
   text-align: justify;
   text-transform: capitalize;
-  color: var(--text-black-9700);
+  color: var(--text-black-700);
 }
 /* Portfolio */
 
@@ -541,6 +542,19 @@ h3.my-profession span {
 .portfolio .portfolio-items-inner .portfolio-img img {
   width: 100%;
   height: 300px;
+}
+
+.portfolio-btns{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.portfolio-btns .btn{
+  background-color: var(--skin-color);
+  color: var(--bg-black-100);
+}
+.project-description p{
+  color:var(--text-black-700);
 }
 
 /* Contact */
@@ -653,5 +667,40 @@ h3.my-profession span {
     flex: 0 0 100%;
 
     max-width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .contact-title{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-title{
+    margin-top: 28px;
+  }
+}@media (max-width:420px)
+{
+  .about .about-content .personal-info .info-term p span{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 410px) {
+  .contact .contact-info-item p{
+    margin-top: 28px;
+    margin: 15px -15px;
+  }
+}
+@media (max-width: 370px) {
+  .about .about-content .personal-info .info-term.email,
+  .about .about-content .personal-info .info-term.degree,
+  .about .about-content .personal-info .info-term.city{
+   padding-left: 20px;
+  }
+}
+@media (max-width: 360px) {
+ .contact .contact-info-item p{
+    margin: 15px -27px;
   }
 }

@@ -6,10 +6,14 @@ $(".style-switcher-toggler").on("click", () => {
 });
 // hide styel-switcher on scroll down
 // window.addEventListener("scroll", () => {
-
+// $(window).scroll(function () {
+//   if ($(".style-switcher").hasClass("open")) {
+//     $(".style-switcher").toggleClass("open");
+//     console.log('scroll works');
+//   }
 // });
 // hide styel-switcher on scroll down
-$('.Section').scroll(function () {
+$('.Section').on('scroll', () => {
   if ($(".style-switcher").hasClass("open")) {
     $(".style-switcher").toggleClass("open");
     console.log('scroll works');
