@@ -437,6 +437,7 @@ h3.my-profession span {
   top: -48px;
   font-weight: 400;
   line-height: 40px;
+  color: var(--text-black-700);
 }
 .about .about-content .Certs {
   flex: 0 0 50%;
@@ -657,6 +658,18 @@ h3.my-profession span {
     max-width: 50%;
   }
 }
+@media (max-width: 900px) {
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .about .about-content .Certs,
+  .about .about-content .education,
+  .about .about-content .personal-info,
+  .about .about-content .skills 
+   {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .contact .contact-info-item,
   .portfolio .portfolio-item,
@@ -669,17 +682,51 @@ h3.my-profession span {
     max-width: 100%;
   }
 }
+
+
+@media (max-width:670px){
+  .about .about-content .personal-info .info-term.email p span{
+    font-size: 15px;
+  }
+}
 @media (max-width: 650px) {
   .contact-title{
     margin-top: 20px;
   }
+}
+@media (max-width:585px){
+  .about .about-content .personal-info .info-term.email p span{
+    font-size: 13px;
+  }
+}
+@media (max-width:517px){
+  .about .about-content .personal-info .info-term.email p span{
+    font-size: 12px;
+  }
+}
+@media (max-width:477px){
+  .about .about-content .personal-info .info-term p span{
+    font-size: 12px;
+  }
+  .about .about-content .personal-info .info-term.age,
+  .about .about-content .personal-info .info-term.degree,
+  .about .about-content .personal-info .info-term.city
+  {
+padding-left: 35px;  }
+
 }
 
 @media (max-width: 450px) {
   .contact-title{
     margin-top: 28px;
   }
-}@media (max-width:420px)
+}@media (max-width: 423px) {
+  .portfolio .portfolio-items-inner .portfolio-img img {
+    width: 100%;
+    height: 220px;
+  }
+}
+  @media (max-width:420px)
 {
   .about .about-content .personal-info .info-term p span{
     font-size: 14px;
@@ -692,11 +739,28 @@ h3.my-profession span {
     margin: 15px -15px;
   }
 }
+
+ .portfolio-btns {
+  display: block;
+  text-align: center;
+ }
+ .portfolio-btns .btn{
+  width: 98%;
+  margin-bottom: 5px;
+ }
+
+ 
+
+
 @media (max-width: 370px) {
   .about .about-content .personal-info .info-term.email,
   .about .about-content .personal-info .info-term.degree,
   .about .about-content .personal-info .info-term.city{
    padding-left: 20px;
+  }
+  .portfolio .portfolio-items-inner .portfolio-img img {
+    width: 100%;
+    height: 170px;
   }
 }
 @media (max-width: 360px) {

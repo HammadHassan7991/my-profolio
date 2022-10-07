@@ -63,6 +63,12 @@ const showSection = (p) => {
 $('.nav-toggler').on('click', (e) => {
     asideToggler();
 })
+$('.Section').on('click', () => {
+    if ($('.aside').hasClass('open')) {
+        asideToggler();
+    }
+
+})
 
 const asideToggler = () => {
     $('.aside').toggleClass('open')
