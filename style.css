@@ -355,6 +355,9 @@ h3.my-profession span {
   font-weight: 700;
   color: var(--text-black-700);
 }
+.about .about-content .about-text p {
+text-align: justify;
+}
 .about .about-content .about-text h3 span {
   color: var(--skin-color);
 }
@@ -403,6 +406,9 @@ h3.my-profession span {
   max-width: 40%;
   /* background-color: green; */
   margin-top: 40px;
+}
+.about .about-content .skills {
+ color: var(--skin-color);
 }
 .about .about-content .skills .skill-item {
   flex: 0 0 100%;
