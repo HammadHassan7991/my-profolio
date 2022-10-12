@@ -241,6 +241,10 @@ border-color: transparent;
   text-align: center;
   position: relative;
 }
+.Home .home-img img{
+  width: 260px;
+  margin-top: 44px
+}
 .Home .home-img::before {
   /* flex: 1; */
 
@@ -648,6 +652,32 @@ text-align: justify;
   .about .about-content .personal-info .info-term p span {
     display: block;
     margin-left: 0;
+  }
+}
+@media (max-width: 1240px) {
+  .Home .home-img::before {
+    /* flex: 1; */
+  
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-left: 10px solid var(--skin-color);
+    border-top: 10px solid var(--skin-color);
+    top: 8px;
+    left: -1px;
+  }
+  .Home .home-img::after {
+    /* flex: 1; */
+  
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-right: 10px solid var(--skin-color);
+    border-bottom: 10px solid var(--skin-color);
+    bottom: 28px;
+    right: -4px;
   }
 }
 @media (max-width: 991px) {
